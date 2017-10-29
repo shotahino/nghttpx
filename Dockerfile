@@ -27,9 +27,6 @@ RUN apt-get update && apt-get install -y \
 COPY nghttp2-1.27.0.tar.bz2 /tmp/nghttp2-1.27.0.tar.bz2
 RUN tar xf tmp/nghttp2-1.27.0.tar.bz2 &&\
     cd nghttp2-1.27.0 &&\
-    autoreconf -i &&\
-    automake &&\
-    autoconf &&\
     ./configure --enable-app &&\
     make &&\
     make install &&\
